@@ -1,0 +1,24 @@
+.grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.grid-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.fail {
+  color: red;
+  border: 1px dashed red;
+}
+
+.gridStyle {
+  margin: 15px 40px;
+}
+.display_btn{
+  margin: 20px 0;
+}
+.edit_form div{
+  margin: 20px 0;
+}

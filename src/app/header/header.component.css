@@ -1,0 +1,32 @@
+.header {
+  box-shadow: #ddd 0px 2px 2px 0px;
+  background-color: rgb(255, 248, 247);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+}
+.header div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout_btn {
+  border: none;
+  background-color: #fff;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  box-shadow: hsl(0, 0%, 87%) 0px 0px 4px 1px;
+  cursor: pointer;
+}
+
+.logout_btn:hover {
+  background-color: tomato;
+  color: #fff;
+  transition: all ease-out 0.5s;
+  box-shadow: #ddd 2px 2px 4px 1px;
+}

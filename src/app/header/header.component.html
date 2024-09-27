@@ -1,0 +1,26 @@
+
+<div class="header">
+  <div *ngIf="authService.hasRole('admin')">
+    <h3>Admin Panel</h3>
+    <h4>Welcome, Admin {{authService.getUsername()}}!</h4>
+    <p>
+      You can manage everything here.
+    </p>
+  </div>
+  
+  <!-- Only editors can see this -->
+  <div *ngIf="authService.hasRole('editor')">
+    <h3>Editor Panel</h3>
+  <h4>Welcome, Editor!{{authService.getUsername()}}</h4>
+  <p> You can edit content here.</p>
+</div>
+
+<!-- Only regular users can see this -->
+<div *ngIf="authService.hasRole('user')">
+  <h3>User Dashboard</h3>
+  <h4>Welcome, User!{{authService.getUsername()}}</h4>
+  <p> You can view your data here.</p>
+</div>
+  <button *ngIf="!authService.hasRole('editor') && !authService.hasRole('user') && !authService.hasRole('admin')" (click)="authService.logout()"  class="logout_btn">login</button>
+  <button (click)="authService.logout()"  class="logout_btn">Logout</button>
+</div>

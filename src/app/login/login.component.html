@@ -1,0 +1,18 @@
+<h1 class="container d-flex justify-content-center">Login</h1>
+
+<form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="container">
+  <div class="mb-3 row d-flex flex-column justify-content-center">
+    <label for="userName">User Name</label>
+    <input type="text" id="userName" name="userName" [(ngModel)]="username" required>
+  </div>
+  <div class="mb-3 row">
+    <label for="Password">Password</label>
+    <input type="password" id="Password" name="password" [(ngModel)]="password" required>
+  </div>
+  <div>
+
+    <input type="submit" [disabled]="!loginForm.valid" value="Login" class="btn btn-primary">
+  </div>
+
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+</form>
