@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   username = '';
+  
   password = '';
   errorMessage = '';
 
